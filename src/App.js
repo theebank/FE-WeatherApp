@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import {useEffect,useState} from "react";
-
+import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import {WeatherCard, Navbar} from './components'
+import { Typography,Grid } from '@mui/material';
+import WeatherCards from './components/WeatherCards/WeatherCards';
 
 
 function App() {
@@ -16,8 +18,7 @@ function App() {
 
   if(Weather){
   return (
-    
-   <WeatherCard Weather = {Weather} />
+    <WeatherCards Weather = {Weather}></WeatherCards>
   )}else{
     return(<div></div>)
   }
